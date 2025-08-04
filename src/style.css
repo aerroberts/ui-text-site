@@ -1,0 +1,129 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #202020;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow: hidden;
+    user-select: none;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Currency display */
+
+.currency-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    width: 200px;
+    height: 20px;
+}
+
+.currency-symbol {
+    transform: translateY(1px);
+}
+
+.currency-display {
+    position: relative;
+    width: 150px;
+    height: 18px;
+    background-color: #000000;
+    border: 3px solid #202020;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.currency-value-bar {
+    height: 100%;
+    transition: width 1s linear;
+}
+
+/* Choice Modal */
+
+.choice-display {
+    transition: opacity 0.4s ease;
+}
+
+.choice-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choice-header {
+    border: 1px solid #737373;
+    background-color: #000000;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    filter: grayscale(1);
+
+}
+
+.choice-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: opacity 0.4s ease;
+}
+
+.choice-option:hover {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+}
+
+.choice-option {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #737373;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option-cost {
+    justify-self: flex-end;
+    font-size: 12px;
+    padding: 0px 5px;
+    width: fit-content;
+    border-radius: 3px;
+    opacity: 0.7;
+}
+
+/* Machine */
+
+.machine-part-container {
+    width: 500px;
+    margin: auto;
+}
